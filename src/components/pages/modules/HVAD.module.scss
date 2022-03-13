@@ -1,0 +1,133 @@
+html {
+    overflow-y: auto !important;
+}
+
+.background-image {
+    transform: scale(225%) !important;
+    cursor: default;
+}
+
+.main-container {
+    background-color: var(--white);
+    height: 100%;
+    position: absolute;
+    transition: all 1s cubic-bezier(0.62, 0, 0.25, 0.93) 0.7s;
+    top: 100%;
+}
+
+.image-container {
+    margin: auto;
+    padding: 1em 5.5em;
+}
+.buffer-bottom {
+    padding-bottom: 6em;
+}
+
+.image-1, .image-2, .image-3 {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px 0px var(--grey-200);
+    z-index: 1;
+}
+.image-2 {
+    width: 70%;
+}
+.image-3 {
+    width: 70%;
+    margin: 4em auto auto 16em;
+}
+
+.dots-1 {
+    width: 130px;
+    height: auto;
+    margin: 3.5em auto 3.5em 7em;
+}
+
+.label-1 {
+    width: 25%;
+    margin: -23em auto auto 42em;
+}
+.label-2 {
+    width: 100%;
+    margin: 1em auto auto 1em;
+}
+
+.line-1 {
+    width: 200px;
+    height: 3px;
+    background-color: var(--blue-300);
+    margin: -3em auto auto 30em;
+}
+.line-2 {
+    width: 200px;
+    height: 100px;
+    border: 3px solid;
+    border-color: var(--blue-300) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) var(--blue-300);
+    margin: -9.5em auto auto 7em;
+}
+
+.project--label {
+    position: relative;
+    color: var(--black);
+    text-align: center;
+    z-index: 20 !important;
+    width: calc(100% - 0.15em);
+    height: 1.25em;
+    margin: auto;
+    display: block;
+    margin-top: 0.5em;
+    padding: 6px 40px 0px 40px;
+    font-size: 8rem;
+    font-stretch: extra-expanded;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    mix-blend-mode: screen;
+    background-color: rgba(255, 255, 255, 0.904);
+    line-height: 1.15em;
+    cursor: default;
+    transition: transform 1s ease-out ;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 1403px) {
+    .image-3 {
+        margin: 5em auto auto 19.5em;
+    }
+    .label-1 {
+        width: 25%;
+        margin: -26em auto auto 49.5em;
+    }
+    .line-1 {
+        margin: -2em auto auto 37em;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .label-1 {
+        width: 40%;
+        margin: -18em auto auto 35em;
+    }
+    .line-1 {
+        margin: -3em auto auto 23em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .label-1 {
+        width: 50%;
+        margin: -13em auto auto 25em;
+    }
+    .line-1 {
+        margin: -2em auto auto 12.5em;
+    }
+    .label-2 {
+        width: 120%;
+        margin: 1em auto auto auto;
+    }
+    .line-2 {
+        margin: -9.5em auto auto 5em;
+    }
+    .image-3 {
+        margin: 4em auto auto 10em;
+    }
+}

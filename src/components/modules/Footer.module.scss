@@ -1,0 +1,27 @@
+.footer-container {
+    background-color: var(--black);
+    padding: 5em;
+}
+
+.footer-button {
+    background-color: white;
+    padding: 1em 3em;
+    display: block;
+    margin: auto;
+    font-weight: 300;
+    font-size: 110%;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(107%);
+    }
+    &:active {
+        transition: all 0.3s ease;
+        transform: scale(100%);
+    }
+    &:focus {
+        background-color: var(--grey-200);
+    }
+}

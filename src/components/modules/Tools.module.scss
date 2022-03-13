@@ -1,0 +1,45 @@
+.tools-container {
+    padding: 7em 3.5em 3em 3.5em;
+}
+
+.tools-icons {
+    img {
+        width: 12%;
+        padding: 1em 1.5em;
+        border-radius: 100%;
+    }
+    img:first-child {
+        margin-left: 0em;
+    }
+}
+
+.tools-labels {
+    p {
+        text-align: center;
+        padding: 1em;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}
+
+.dots-1 {
+    width: 115px;
+    height: auto;
+    margin: -40em auto auto 85%;
+    z-index: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .tools-icons {
+        img {
+            padding: 1em;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dots-1 {
+        margin: 2em auto auto 5%;
+    }
+}
+

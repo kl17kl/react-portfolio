@@ -1,0 +1,107 @@
+:root {
+    --teal-200:#71a9c2;
+    --teal-400:#4e859e;
+    --blue-200:#dcf7ffce;
+    --blue-300:#A1D9EB;
+    --blue-400:#5FC5FF;
+    --blue-500:#006c9e;
+    --link: #2c7bc4;
+    --link-hover: #0b4f7c;
+    --white: rgb(255, 255, 255);
+    --grey-100: rgb(207, 216, 219);
+    --grey-200: rgb(179, 190, 194);
+    --grey-400: rgb(165, 179, 184);
+    --grey-500: rgb(115, 118, 119);
+    --grey-600: rgb(80, 84, 85);
+    --grey-700: rgb(58, 60, 61);
+    --black: rgb(32, 32, 32);
+    --radius: 60px;
+}
+
+::selection {
+  background: var(--blue-300);
+}
+::-moz-selection {
+  background: var(--blue-300);
+}
+
+html {
+    overflow-x: hidden;
+    color: var(--black);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 110%;
+}
+
+#main {
+  overflow: hidden;
+  height: 80vh;
+}
+
+.main-project-container {
+  height: 80vh;
+  width: 100%;
+  position: absolute;
+  top: 5.5em;
+  left: 0em;
+}
+
+.text-title {
+  font-weight: 300;
+  font-size: 250%;
+  text-transform: uppercase;
+  margin-left: 0.9em;
+}
+.text-subtitle {
+  font-size: 145%;
+  margin: -0.6em 0 1.5em 1.55em;
+  color: var(--grey-400);
+}
+.text-regular {
+  line-height: 1.7;
+  font-size: 115%;
+}
+
+.accent-bar {
+  background-color: var(--blue-400);
+  width: 5px;
+  height: 2.6em;
+  margin: -3.3em 0em 3em .5em;
+}
+
+@keyframes fade-in {
+  0% {
+      transform: translateY(10%);
+      opacity: 0.3;
+  }
+  30% {
+      transform: translateY(0%);
+  }
+  100% {
+      opacity: 1;
+  }
+}
+@-moz-keyframes fade-in {
+  0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+@-webkit-keyframes fade-in {
+  0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.message {
+  padding: 3em 5.5em 7.5em 5.5em;
+  line-height: 2;
+}

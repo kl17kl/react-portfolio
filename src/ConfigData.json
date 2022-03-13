@@ -1,0 +1,38 @@
+{
+    "projects": {
+        "EKKN": {
+            "id": 0, 
+            "value": 1, 
+            "label":"EKKN", 
+            "type":"Point of Sale Application", 
+            "date":"JAN 2022 - PRESENT", 
+            "image": "images/ekkn-preview.jpg",
+            "desc": "An intelligent, powerful, and user friendly point of sale system that fully caters to the Mrs. Convenience business. The system goes beyond processing transactions and tracking sales by filling in the gaps of modern day POS systems that are designed for convenience store businesses. Ekkn Point of Sale provides business owners with product group manageability, discount manageability, and insightful sales reports, inventory reports, and trend reports to help owners manage their business.",
+            "tags":["UX design","UI design","Fullstack development","Application development","Database design"],
+            "demo": {
+                "names":["Main Terminal","Receipts","Item Manager","Discount Manager","Group Item Manager","Reports","Settings"],
+                "images":["images/ekkn1.png","images/ekkn2.png"]
+            }
+        },
+        "HVAD": {
+            "id": 1, 
+            "value": 2, 
+            "label":"HVAD", 
+            "type":"Web Application", 
+            "date":"NOV 2021 - DEC 2021", 
+            "image": "images/hvad-preview.png",
+            "desc": "An interface designed for developers to help analyze and test AI vehicular tracking systems integrated with Ontario highway video cameras. HVAD allows its users to continuously test and improve their AI models under various conditions that may impact video feed and model performance (i.e., weather conditions, obstructions, etc.). Users can test their models by feeding them clips of live video feed and their results get sent back to the dashboard. This allows the user to then perform accuracy testing and analysis on the model's performance under its experimented conditions.",
+            "tags":["UX design","UI design","Visual design","Front-end development"]
+        },
+        "COAD": {
+            "id": 2, 
+            "value": 3, 
+            "label":"COAD", 
+            "type":"Web Application - Dashboard", 
+            "date":"JAN 2021 - APR 2021", 
+            "image": "images/coad-preview.png",
+            "desc": "A user friendly dashboard dedicated to Brock undergradute students that provides them with an interactive course scheduler and organizer. COAD allows students to easily plan out their courses for any semester and helps guide them in successfully planning out their academic careers by providing course reccommendations and potential conflicts. Students can also see their program details and requirements, an overview of courses that they've taken, a course credit tracker, and a listing of all available courses that are offered at the university.",
+            "tags":["Front-end development","Software engineering","Database design","Application development"]
+        }
+    }
+}

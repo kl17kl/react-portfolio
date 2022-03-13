@@ -1,0 +1,145 @@
+.journey-container {
+    padding: 7em 3.5em 3em 3.5em;
+}
+
+.margin-left {
+    margin-left: 2em;
+}
+
+.text-container, .text-container--focus {
+    background-color: #dcf7ff63;
+    padding: 2em;
+    border: 3px solid var(--blue-300);
+}
+.text-container--focus {
+    background-color: var(--blue-200);
+    border: 3px solid var(--blue-300);
+}
+
+.journey-header, .journey-header--focus {
+    text-align: center;
+    font-size: 135%;
+    color: var(--blue-500);
+    text-transform: capitalize;
+}
+.journey-header--focus {
+    margin-top: 0em;
+}
+
+.header {
+    z-index: 1;
+    margin: auto auto auto -6em;
+    text-align: center;
+}
+.highlight {
+    display: inline-block;
+    background-color: var(--blue-200);
+    height: 0.7em;
+    width: 7.5em;
+    margin: auto auto -0.4em -1em;
+    z-index: 0;
+}
+
+.journey-text {
+    margin: auto;
+}
+
+.dots-1, .dots-2 {
+    width: 115px;
+    height: auto;
+    margin: 2em auto auto auto;
+    z-index: 0;
+}
+.dots-2 {
+    margin: -73em auto auto 83%;
+}
+
+.scroll-container {
+    overflow: auto;
+    cursor: default;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    width: 130%;
+}
+
+
+@media screen and (max-width: 992px) {
+    .dots-2 {
+        width: 110px;
+        margin: -117em auto auto 83%;
+    }
+    .margin-left {
+        margin-left: 1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .fade-away {
+        width: 10%;
+        height: 100%;
+        position: absolute;
+        
+        &.right {
+            right: 0;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.918), white);
+        }
+        &.left {
+            width: 20%;
+            left: 0;
+            background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.918), white);
+        }
+    }
+    .journey-card, .journey-card--right, .journey-card--left {
+        cursor: pointer;
+        padding: 0 1em;
+        transition: all 0.7s ease;
+    }
+    .journey-card--right {
+        padding: 0 1em 0 0;
+    }
+    .journey-card--left {
+        padding: 0 0 0 1em;
+    }
+    .journey-card:active, .journey-card--right:active, .journey-card--left:active {
+        cursor: grab;
+    }
+}
+
+@media screen and (max-width: 630px) {
+
+    .fade-away {
+        width: 8%;
+        height: 100%;
+        position: absolute;
+        
+        &.right {
+            right: 0;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.918), white);
+        }
+        &.left {
+            width: 23%;
+            left: 0;
+            background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.918), white);
+        }
+    }
+    .journey-card, .journey-card--right, .journey-card--left {
+        cursor: pointer;
+        padding: 0 1em;
+        transition: all 0.7s ease;
+    }
+    .journey-card--right {
+        padding: 0 3em 0 0;
+    }
+    .journey-card--left {
+        padding: 0 0 0 2em;
+    }
+    .scroll-container {
+        overflow: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        width: 120%;
+    }
+}
