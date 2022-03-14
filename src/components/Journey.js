@@ -33,7 +33,7 @@ function Journey(props) {
                     <p className={styles['journey-header']}>SITUATION</p>
                     <div className={styles['text-container']}>
                         <p className={styles['journey-text']}>
-                        The owners of Mrs. Convenience have struggled to find a Point of Sale system that can best fit the needs of their business. Through their experiences, past systems have failed to properly support the management of their business. I decided to work together with the owners to design and implement a system that would tackle their pain points and provide them with the best platform to elevate their business management.
+                        The owners of Mrs. Convenience have struggled to find a Point of Sale system that can best fit the needs of their business. Through their experiences, past systems have failed to properly support the management of their business. I decided to work together with the owners to design and implement a system that would tackle their pain points and provide them with the best platform to elevate their business.
                         </p>
                     </div>
                 </div>
@@ -45,7 +45,7 @@ function Journey(props) {
                     </p>
                     <div className={styles['text-container--focus']}>
                         <p className={styles['journey-text']}>
-                        Through user interviewing, we identified the main requirements that either needed to be newly created or improved upon. Some  requirements include inventory tracking, insightful reporting, and mass product management. Currently, I am developing mockups and protoypes and testing them with our users to ensure the optimal experience. More user research and experience design methods will be used in this stage to fully understand their needs and achieve the best results possible.
+                        Through user interviewing, we identified the main requirements of the system. Some of which include inventory tracking, insightful reporting, and mass product management. As of now, I am developing mockups and protoypes and testing them with the users to ensure the optimal experience. More user research and design methods will be used in this stage to fully understand the user's needs and achieve the best results possible.
                         </p>    
                     </div>
                 </div>
@@ -54,7 +54,7 @@ function Journey(props) {
                     <p className={styles['journey-header']}>IMPLEMENTATION</p>
                     <div className={styles['text-container']}>
                         <p className={styles['journey-text']}>
-                        In the implementation stage, I will be bringing an approved design to life using front-end and back-end technologies such as HTML, React, MySQL, and Java. I will be communicating closely with the owners to build and present iterations of my system - making any necessary adjustments along the way - to build the perfect solution for their business.
+                        In the implementation stage, I will be bringing an approved and successful design to life using front-end and back-end technologies such as HTML, React, MySQL, and Java. I will be communicating closely with the owners to build and present iterations of my system - making any necessary adjustments along the way - to build the perfect solution for them and their business.
                         </p>    
                     </div>  
                 </div>

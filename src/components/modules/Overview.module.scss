@@ -17,14 +17,15 @@
 }
 
 .overview-desc {
+    position: relative;
     width: 70%;
     line-height: 1.7;
     z-index: 5;
-    background-color: white;
 }
 
 .overview-tags {
     width: 14em;
+    position: relative;
     margin: -11.1em -1em auto auto;
     color: var(--blue-500);
     z-index: 5;
@@ -38,8 +39,10 @@
 
 .overview-box {
     width: 210px;
-    height: 310px;
-    margin: -11.3em -2.5em auto auto;
+    height: 270px;
+    position: absolute;
+    top: 14em;
+    margin: auto auto auto 760px;
     background-color: var(--blue-200);
     z-index: 1;
 }
@@ -47,32 +50,27 @@
 .overview-line {
     width: 5px;
     height: 170px;
+    position: absolute;
+    top: 16em;
     background-color: var(--blue-300);
-    margin: -15.5em auto auto -2em;
+    margin: auto auto auto -2em;
 }
 
-.dots-1, .dots-2, .dots-3 {
+.dots-1, .dots-2 {
     width: 115px;
     height: auto;
-    margin: 3em auto auto auto;
+    margin: 5em auto auto auto;
     z-index: 0;
 }
 .dots-2 {
     width: 105px;
     margin: -45em auto auto 93%;
 }
-.dots-3 {
-    display: none;
-}
 
 
 @media screen and (min-width: 1403px) {
     .overview-tags {
         margin-top: -11.2em;
-    }
-    .overview-line {
-        margin-top: -15.7em;
-        height: 180px;
     }
 }
 
@@ -81,15 +79,11 @@
         margin-top: -14.4em;
         margin-right: -3em;
     }
-    .overview-box {
-        margin-right: -4.5em;
-    }
-    .overview-line {
-        margin-top: -15.7em;
-        height: 240px;
+    .dots-1 {
+        margin-top: 8em;
     }
     .dots-2 {
-        margin-top: -55em;
+        margin-top: -50em;
     }
 }
 
@@ -105,20 +99,19 @@
         padding-bottom: 5em;
     }
     .overview-box {
-        margin-right: -9em;
+        margin-top: 3em;
     }
     .overview-line {
-        margin-top: -15.7em;
-        height: 370px;
+        top: 18.5em;
     }
     .dots-2 {
-        margin: -73em auto auto 105%;
+        margin: -43em auto auto 105%;
     }
 }
 
 @media screen and (max-width: 766px) {
     .overview-container {
-        padding: 7em 4em;
+        padding: 7em 4em 0em 4em;
     }
     .overview-type {
         font-size: 220%;
@@ -140,25 +133,106 @@
         line-height: 2;
     }
     .overview-box {
-        margin: -17em 0em auto auto;
-        width: 200px;
+        margin-top: 20em;
+        width: 220px;
         height: 200px;
     }
     .overview-line {
-        margin: -35em auto auto -2em;
-        height: 390px;
+        top: 18.5em;
     }
     .dots-1 {
         width: 90px;
-        margin: auto auto -15em auto;
+        margin: -25em auto -15em auto;
     }
     .dots-2 {
         width: 85px;
-        margin: -63em auto auto 78%;
-    }
-    .dots-3 {
-        display: block;
-        width: 90px;
-        margin: 7.2em auto auto 0em;
+        margin: -95em auto auto 78%;
     }
 }
+
+
+@media screen and (max-width: 490px) {
+    .overview-box {
+        margin-top: 22em;
+    }
+    .dots-2 {
+        margin: -100em auto auto 85%;
+    }
+}
+@media screen and (max-width: 460px) {
+    .overview-box {
+        margin-top: 25em;
+    }
+    .dots-2 {
+        display: none;
+    }
+
+}
+@media screen and (max-width: 435px) {
+    .overview-box {
+        margin-top: 28em;
+    }
+    .dots-2 {
+        display: none;
+    }
+}
+@media screen and (max-width: 414px) {
+    .overview-box {
+        margin-top: 30em;
+    }
+    .dots-2 {
+        display: none;
+    }
+}
+@media screen and (max-width: 406px) {
+    .overview-line {
+        top: 21em;
+    }
+    .overview-box {
+        margin-top: 35em;
+    }
+    .dots-2 {
+        display: none;
+    }
+}
+@media screen and (max-width: 376px) {
+    .overview-box {
+        margin-top: 39em;
+        width: 200px;
+    }
+    .dots-2 {
+        display: none;
+    }
+}
+@media screen and (max-width: 360px) {
+    .overview-box {
+        margin-top: 41em;
+    }
+    .dots-2 {
+        display: none;
+    }
+}
+@media screen and (max-width: 354px) {
+    .overview-line {
+        top: 23em;
+    }
+    .overview-box {
+        margin-top: 43em;
+        width: 180px;
+    }
+    .overview-container {
+        padding: 7em 3.5em 3em 3.5em;
+    }
+    .dots-2 {
+        display: none;
+    }
+}
+@media screen and (max-width: 340px) {
+    .overview-box {
+        margin-top: 52em;
+    }
+    .dots-2 {
+        display: none;
+    }
+}
+

@@ -3,13 +3,13 @@ import styles from './modules/Slideshow.module.scss';
 
 function Slideshow(props) {
 
-    let names = props.data.demo.names;
-    let images = props.data.demo.images;
+    let names = props.data.gallery.names;
+    let images = props.data.gallery.images;
 
     const [focus, setFocus] = useState(0);
     const label = ["Lookup item description, price, discount, taxes, group name, and inventory.","View and export financial sales, daily sales, inventory, and item sales reports. Analyze product performances and trends based on consumer purchases."]
      
-    const slideImages = images.map((image, i) => 
+    const slideImages = images[0].map((image, i) => 
     <div key={i}>
         <p className={focus==i ? 'd-block text-center ' + styles['slide-label']: 'd-none'}>{names[i]}</p>
         <img src={image} className={focus==i ? 'd-block ' + styles['slide-image'] : 'd-none ' + styles['slide-image']} alt='Screen image' />

@@ -11,6 +11,10 @@
     align-items: center;
     transition: transform 1.3s cubic-bezier(0.73, -0.35, 0.27, 1);
     z-index: 0;
+    background-image: url('../../../../public/images/dot-grid.png') ;
+    background-image: url('../../../../public/images/dot-grid.webp') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .projects {
@@ -120,18 +124,15 @@
 }
 
 #item-1:checked ~ #project-3 img, #item-2:checked ~ #project-1 img, #item-3:checked ~ #project-2 img {
-    transition: opacity 0.3s ease 0.3s;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease 0.1s;
     opacity: 0.4;
 }
 #item-1:checked ~ #project-2 img, #item-2:checked ~ #project-3 img, #item-3:checked ~ #project-1 img {
-    transition: opacity 0.3s ease 0.3s;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease 0.1s;
     opacity: 0.4;
 }
 #item-1:checked ~ #project-1 img, #item-2:checked ~ #project-2 img, #item-3:checked ~ #project-3 img{
-    transition: opacity 0.3s ease 0.3s;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease 0.1s;
     opacity: 1;
     z-index: 10;
 }

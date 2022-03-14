@@ -6,12 +6,21 @@
             "label":"EKKN", 
             "type":"Point of Sale Application", 
             "date":"JAN 2022 - PRESENT", 
-            "image": "images/ekkn-preview.jpg",
+            "image": {
+                "webp":"images/ekkn-preview.webp",
+                "fallback":"images/ekkn-preview.jpg",
+                "alt":"A picture of a cashier with a point of sale system."
+            },
             "desc": "An intelligent, powerful, and user friendly point of sale system that fully caters to the Mrs. Convenience business. The system goes beyond processing transactions and tracking sales by filling in the gaps of modern day POS systems that are designed for convenience store businesses. Ekkn Point of Sale provides business owners with product group manageability, discount manageability, and insightful sales reports, inventory reports, and trend reports to help owners manage their business.",
-            "tags":["UX design","UI design","Fullstack development","Application development","Database design"],
-            "demo": {
-                "names":["Main Terminal","Receipts","Item Manager","Discount Manager","Group Item Manager","Reports","Settings"],
-                "images":["images/ekkn1.png","images/ekkn2.png"]
+            "tags":["UX design","UI design","Fullstack development","Database design"],
+            "gallery": {
+                "names":["Main Terminal","Transaction History", "Item Manager"],
+                "images": {
+                    "webp":["images/ekkn1.webp","images/ekkn2.webp","images/ekkn3.webp","images/ekkn-db-design.webp"],
+                    "fallback":["images/ekkn1.png","images/ekkn2.png","images/ekkn3.png","images/ekkn-db-design.png"],
+                    "alt":["A picture of the main terminal interface.","A picture of the transaction history screen.","A picture of the item manager screen.","A picture of an Entity-Relation database diagram made for the EKKN system."],
+                    "label":["Operate the main terminal: process transactions, and manage customer carts and till.","View processed transactions and details (i.e., method of payment, item sales, paid amount, etc.).","Add, modify, and delete items.\nLookup item description, price, discount, taxes, group name, and inventory."]
+                }
             }
         },
         "HVAD": {
@@ -20,19 +29,43 @@
             "label":"HVAD", 
             "type":"Web Application", 
             "date":"NOV 2021 - DEC 2021", 
-            "image": "images/hvad-preview.png",
+            "image": {
+                "webp":"images/hvad-preview.webp",
+                "fallback":"images/hvad-preview.png",
+                "alt":"A picture of a highway with some cars at night."
+            },
             "desc": "An interface designed for developers to help analyze and test AI vehicular tracking systems integrated with Ontario highway video cameras. HVAD allows its users to continuously test and improve their AI models under various conditions that may impact video feed and model performance (i.e., weather conditions, obstructions, etc.). Users can test their models by feeding them clips of live video feed and their results get sent back to the dashboard. This allows the user to then perform accuracy testing and analysis on the model's performance under its experimented conditions.",
-            "tags":["UX design","UI design","Visual design","Front-end development"]
+            "tags":["UX design","UI design","Visual design","Front-end development"],
+            "gallery": {
+                "names":["Streams","Clips","Experiments","Experiment Evaluation"],
+                "images": {
+                    "webp":["images/hvad1.webp","images/hvad2.webp","images/hvad3.webp","images/hvad4.webp"],
+                    "fallback":["images/hvad1.png","images/hvad2.png","images/hvad3.png","images/hvad4.png"],
+                    "alt":["A picture of a dashboard showing all video streams.","A picture of a dashboard showing all video clips.","A picture of a dashboard showing all experiments conducted with AI models.","A picture of an experiment evaluation screen."]
+                }
+            }
         },
         "COAD": {
             "id": 2, 
             "value": 3, 
             "label":"COAD", 
-            "type":"Web Application - Dashboard", 
+            "type":"Web Application", 
             "date":"JAN 2021 - APR 2021", 
-            "image": "images/coad-preview.png",
+            "image": {
+                "webp":"images/coad-preview.webp",
+                "fallback":"images/coad-preview.png",
+                "alt":"A picture of Brock University's campus."
+            },
             "desc": "A user friendly dashboard dedicated to Brock undergradute students that provides them with an interactive course scheduler and organizer. COAD allows students to easily plan out their courses for any semester and helps guide them in successfully planning out their academic careers by providing course reccommendations and potential conflicts. Students can also see their program details and requirements, an overview of courses that they've taken, a course credit tracker, and a listing of all available courses that are offered at the university.",
-            "tags":["Front-end development","Software engineering","Database design","Application development"]
+            "tags":["Front-end development","Software engineering","Database design","System documentation"],
+            "gallery": {
+                "names":["Dashboard","Dashboard Close-up","Student Login"],
+                "images": {
+                    "webp":["images/coad1.webp","images/coad2.webp","images/coad3.webp"],
+                    "fallback":["images/coad1.png","images/coad2.png","images/coad3.png"],
+                    "alt":["A picture of the dashboard.","A close-up picture of the dashboard.","A picture of the student login page."]
+                }            
+            }
         }
     }
 }
