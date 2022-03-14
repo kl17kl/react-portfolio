@@ -9,7 +9,7 @@
     background-size: cover;
 }
 
-.contact-info {
+.contact-info, .contact-info--mobile {
     background-color: rgba(255, 255, 255, 0.288);
     border-radius: 3px;
     padding: 4em;
@@ -37,7 +37,7 @@
     }
 }
 
-.about-info {
+.about-info, .about-info--mobile {
     padding: 1em;
     padding-left: 0;
     margin: 1em;
@@ -53,6 +53,25 @@
     }
 }
 
+.contact-info--mobile {
+    padding: 1.5em;
+    margin: 2em 1.5em;
+    white-space: normal;
+
+    p {
+        padding: 0.1em;
+        span {
+            padding-right: 0em;
+        }
+    }
+}
+
+.about-info--mobile {
+    padding: 0em;
+    margin: 1em 3em;
+    padding-bottom: 4em;
+}
+
 @media screen and (max-width: 880px) {
     .contact-info {
         background-color: rgba(255, 255, 255, 0.288);
@@ -62,8 +81,4 @@
         margin: 3em;
         white-space: normal;
     }
-}
-
-@media screen and (max-width: 690px) {
-
 }

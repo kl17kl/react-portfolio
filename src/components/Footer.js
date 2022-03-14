@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import styles from './modules/Footer.module.scss'
-import Navbar from './Navbar';
 
 function Footer() {
 
@@ -25,6 +24,7 @@ function Footer() {
         <>
         <div className={'container-fluid ' + styles['footer-container']}>
             <button className={styles['footer-button']} onClick={returnHome}>Back to Projects</button>
+            <p className={styles['footer-text']}>Developed and designed my project portfolio using React, Scss, and HTML5.</p>
         </div>
         </>
     );
