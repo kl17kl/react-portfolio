@@ -7,6 +7,7 @@
     --blue-500:#006c9e;
     --link: #2c7bc4;
     --link-hover: #0b4f7c;
+    --selection: #a1d9eb8a;
     --white: rgb(255, 255, 255);
     --grey-100: rgb(207, 216, 219);
     --grey-200: rgb(179, 190, 194);
@@ -19,10 +20,10 @@
 }
 
 ::selection {
-  background: var(--blue-300);
+  background: var(--selection);
 }
 ::-moz-selection {
-  background: var(--blue-300);
+  background: var(--selection);
 }
 
 html {

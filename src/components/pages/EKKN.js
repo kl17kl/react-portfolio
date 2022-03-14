@@ -11,15 +11,13 @@ function EKKN(props) {
 
     let p = props.data;
 
-    function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
-
+    // The animation for the page load-in
     function loadTransition() {
         var area = document.getElementById('main-container');
         area.style.top = '20em';
     }
 
+    // Change the display of the image section depending on the screen size
     const [display, setDisplay] = useState(false);
     const displaySlides = () => {
         if (window.innerWidth < 768)
@@ -28,13 +26,13 @@ function EKKN(props) {
             setDisplay(false);
     }
     useEffect(() => { displaySlides(); }, []);
-
     window.addEventListener('resize', displaySlides);
 
     return (
         <>
         <div id={'main'}>
             <div className={'main-project-container'}>
+                {/* Above the fold: project title and background image */}
                 <div className={stylesHome['project-container'] + ' container-fluid p-0'} style={{top:'1em', overflow:'hidden'}}>
                     <div className={stylesHome['projects'] + ' d-flex justify-content-center'} styles={{cursor: "default"}} >
                         <div><p className={styles['project--label']}>{p.label}</p></div>
@@ -45,9 +43,9 @@ function EKKN(props) {
                 </div>
             
                 <div id='main-container' className={styles['main-container'] + ' container-fluid p-0'}>
-
+                    {/* Overview section */}
                     {<Overview data={p} />}
-
+                    {/* The images section: either a slideshow display or loose image display depending on screen size */}
                     <div className={display ? 'd-none container' : 'd-block container'}>
                         <div className={'container ' + styles['image-container']}>
                             <p className={'text-center py-3'}><strong>Main Terminal</strong></p>
@@ -63,10 +61,10 @@ function EKKN(props) {
                             <div className={styles['line-2']}></div>
                         </div>
                     </div>
-                    
                     {display ? <Slideshow data={p} /> : null}
+                    {/* Journey section */}
                     {<Journey data={p} />}
-
+                    {/* The database showcase section */}
                     <div className={'container ' + styles['db-container']}>
                         <h1 className={'text-title ' + styles['db-title']}>DATABASE DESIGN</h1>
                         <div className={'accent-bar ' + styles['db-bar']}></div>
@@ -75,10 +73,9 @@ function EKKN(props) {
                         <br/>
                         <p className='text-center'>An entity-relation model (or ER model) representing a level of design of the database.</p>
                     </div>
-
+                    {/* Tools in the stack section */}
                     {<Tools />}
                     {<Footer />}
-
                 </div>
             </div>
             <div id={'white-screen'}></div>
