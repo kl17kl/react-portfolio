@@ -51,7 +51,7 @@
     z-index: 0;
 }
 .dots-2 {
-    margin: -73em auto auto 83%;
+    margin: -80em auto auto 83%;
 }
 
 .scroll-container {
@@ -68,7 +68,7 @@
 @media screen and (max-width: 992px) {
     .dots-2 {
         width: 110px;
-        margin: -117em auto auto 83%;
+        margin: -148em auto auto 83%;
     }
     .margin-left {
         margin-left: 1em;
@@ -105,6 +105,7 @@
     .journey-card:active, .journey-card--right:active, .journey-card--left:active {
         cursor: grab;
     }
+    
 }
 
 @media screen and (max-width: 630px) {

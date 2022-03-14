@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Overview from '../Overview.js';
+import Image from '../Image.js';
 import Footer from '../Footer.js';
 import stylesHome from './modules/Home.module.scss';
 import styles from './modules/HVAD.module.scss';
@@ -25,7 +26,7 @@ function HVAD(props) {
                     <div className={stylesHome['projects'] + ' d-flex justify-content-center'} styles={{cursor: "default"}} >
                         <div><p className={styles['project--label']}>{p.label}</p></div>
                         <label className={stylesHome['project']} styles={{cursor: "default"}} htmlFor={stylesHome['item-1']} id={stylesHome['project-1']}>
-                            <img className={styles['background-image']} src={p.image} alt='project background' loading='eager' draggable='false' onLoad={loadTransition} />
+                            <Image className={styles['background-image']} src={p.image.webp} fallback={p.image.fallback} alt={p.image.alt} onLoad={loadTransition} />                        
                         </label>
                     </div>
                 </div>

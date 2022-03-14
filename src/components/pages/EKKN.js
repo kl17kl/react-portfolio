@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Overview from '../Overview.js';
-import Slideshow from '../Slideshow.js';
+import Image from '../Image.js';
+import VerticalGallery from '../VerticalGallery.js';
 import Journey from '../Journey.js';
 import Tools from '../Tools.js';
 import Footer from '../Footer.js';
@@ -25,8 +26,12 @@ function EKKN(props) {
         else
             setDisplay(false);
     }
-    useEffect(() => { displaySlides(); }, []);
     window.addEventListener('resize', displaySlides);
+
+    useEffect(() => { 
+        displaySlides(); 
+        loadTransition();
+    }, []);
 
     return (
         <>
@@ -37,7 +42,7 @@ function EKKN(props) {
                     <div className={stylesHome['projects'] + ' d-flex justify-content-center'} styles={{cursor: "default"}} >
                         <div><p className={styles['project--label']}>{p.label}</p></div>
                         <label className={stylesHome['project']} styles={{cursor: "default"}} htmlFor={stylesHome['item-1']} id={stylesHome['project-1']}>
-                            <img className={styles['background-image']} src={p.image} alt='project background' loading='eager' draggable='false' onLoad={loadTransition} />
+                            <Image className={styles['background-image']} src={p.image.webp} fallback={p.image.fallback} alt={p.image.alt} />                        
                         </label>
                     </div>
                 </div>
@@ -45,36 +50,42 @@ function EKKN(props) {
                 <div id='main-container' className={styles['main-container'] + ' container-fluid p-0'}>
                     {/* Overview section */}
                     {<Overview data={p} />}
-                    {/* The images section: either a slideshow display or loose image display depending on screen size */}
+                    {/* The images section: either a vertical gallery display or loose image display depending on screen size */}
                     <div className={display ? 'd-none container' : 'd-block container'}>
                         <div className={'container ' + styles['image-container']}>
-                            <p className={'text-center py-3'}><strong>Main Terminal</strong></p>
-                            <img src='images/ekkn1.png' className={styles['image-1']} alt='screen preview 1' />
-                            <img src='images/dots.png' className={styles['dots-1']} />
+                            <p className={'text-center pt-3'}><strong>{p.gallery.names[0]}</strong></p>
+                            <p className={'text-center pb-4'}>{p.gallery.images.label[0]}</p>
+                            <Image className={styles['image-1']} src={p.gallery.images.webp[0]} fallback={p.gallery.images.fallback[0]} alt={p.gallery.images.alt[0]} />
+                            <Image className={styles['dots-1']} src={'images/dots.webp'} fallback={'images/dots.png'} />  
                         </div>  
                         <div className={'container ' + styles['image-container'] + ' ' + styles['buffer-bottom']}>
-                            <img src='images/ekkn2.png' className={styles['image-2']} alt='screen preview 2' />
-                            <p className={styles['label-1']}><strong>Item Manager</strong><br/>Add, modify, and delete items.<br />Lookup item description, price, discount, taxes, group name, and inventory.</p>
+                            <Image className={styles['image-2']} src={p.gallery.images.webp[1]} fallback={p.gallery.images.fallback[1]} alt={p.gallery.images.alt[1]} />
+                            <p className={styles['label-1']}><strong>{p.gallery.names[1]}</strong><br/>{p.gallery.images.label[1]}</p>
                             <div className={styles['line-1']}></div> 
-                            <img src='images/ekkn2.png' className={styles['image-3']} alt='screen preview 3' />
-                            <p className={styles['label-2']}><strong>Reports</strong><br/>View and export financial sales, daily sales, inventory, and item sales reports.<br/>Analyze product performances and trends based on consumer purchases.</p>
+                            <Image className={styles['image-3']} src={p.gallery.images.webp[2]} fallback={p.gallery.images.fallback[2]} alt={p.gallery.images.alt[2]} />
+                            <p className={styles['label-2']}><strong>{p.gallery.names[2]}</strong><br/>{p.gallery.images.label[2]}</p>
                             <div className={styles['line-2']}></div>
                         </div>
                     </div>
-                    {display ? <Slideshow data={p} /> : null}
+                    {display ? <VerticalGallery data={p} /> : null}
                     {/* Journey section */}
+                    <br/>
                     {<Journey data={p} />}
+                    <br/>
                     {/* The database showcase section */}
-                    <div className={'container ' + styles['db-container']}>
+                    <div className={'container pb-5 ' + styles['db-container']}>
                         <h1 className={'text-title ' + styles['db-title']}>DATABASE DESIGN</h1>
                         <div className={'accent-bar ' + styles['db-bar']}></div>
-                        <img src='/images/ekkn-db-design.png' className={styles['db-image']} alt='E.R. diagram' />
+                        <Image className={styles['db-image']} src={p.gallery.images.webp[3]} fallback={p.gallery.images.fallback[3]} alt={p.gallery.images.alt[3]} />
                         <br/>
                         <br/>
                         <p className='text-center'>An entity-relation model (or ER model) representing a level of design of the database.</p>
+                        <br/>
                     </div>
                     {/* Tools in the stack section */}
+                    <br/>
                     {<Tools />}
+                    <br/>
                     {<Footer />}
                 </div>
             </div>

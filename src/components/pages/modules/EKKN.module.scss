@@ -34,7 +34,7 @@ html {
 }
 .image-3 {
     width: 70%;
-    margin: 4em auto auto 16em;
+    margin: 4em auto auto 8em;
 }
 
 .dots-1 {
@@ -60,21 +60,21 @@ html {
 }
 .line-2 {
     width: 200px;
-    height: 100px;
+    height: 70px;
     border: 3px solid;
     border-color: var(--blue-300) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) var(--blue-300);
-    margin: -9.5em auto auto 7em;
+    margin: -7.5em auto auto 6em;
 }
 
 .db-container {
-    padding: 5em 3.5em 3em 3.5em;
+    padding: 5em 3.5em 5em 3.5em;
     background-image: url('../../../../public/images/blueprint-grid.png');
 }
 .db-image {
     width: 95%;
     margin: auto;
     display: block;
-    box-shadow: 0 0 15px 3px rgba(186, 186, 226, 0.514);
+    box-shadow: 0 0 15px 3px rgba(210, 210, 221, 0.514);
 
 }
 
@@ -102,9 +102,6 @@ html {
 }
 
 @media screen and (min-width: 1403px) {
-    .image-3 {
-        margin: 5em auto auto 19.5em;
-    }
     .label-1 {
         width: 25%;
         margin: -26em auto auto 49.5em;
@@ -117,20 +114,26 @@ html {
 @media screen and (max-width: 1200px) {
     .label-1 {
         width: 40%;
-        margin: -18em auto auto 35em;
+        margin: -18em auto auto 32em;
     }
     .line-1 {
-        margin: -3em auto auto 23em;
+        margin: -3em auto auto 20em;
+    }
+    .line-2 {
+        margin: -9em auto auto 6em;
+    }
+    .image-3 {
+        margin: 4em auto auto 8em;
     }
 }
 
 @media screen and (max-width: 992px) {
     .label-1 {
         width: 50%;
-        margin: -13em auto auto 25em;
+        margin: -13em auto auto 22em;
     }
     .line-1 {
-        margin: -2em auto auto 12.5em;
+        margin: -2em auto auto 10em;
     }
     .label-2 {
         width: 120%;
@@ -140,6 +143,6 @@ html {
         margin: -9.5em auto auto 5em;
     }
     .image-3 {
-        margin: 4em auto auto 10em;
+        margin: 4em auto auto 5em;
     }
 }

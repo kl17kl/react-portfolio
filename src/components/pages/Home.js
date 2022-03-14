@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
+import Image from '../Image.js';
 import styles from './modules/Home.module.scss';
 
 function Home(props) {
@@ -37,12 +38,12 @@ function Home(props) {
                 }
             }
         } else {
-            var id = e.target.parentNode.id;
+            var id = e.target.parentNode.parentNode.id;
             var data = items.find((el) => { return el.value === parseInt(id.charAt(13)); })
             try {
                 if (data.label == label) { // If the user selects a project card that is in focus (in the center)...
                     setAnimate(true);
-                    animateSelected(e.target.parentNode, data.label); // ...Play animation and navigate to page
+                    animateSelected(e.target.parentNode.parentNode, data.label); // ...Play animation and navigate to page
                 }
             } catch(ignore){}
         }
@@ -89,13 +90,13 @@ function Home(props) {
                 </div>
                 {/* The project cards */}
                 <label className={styles['project']} htmlFor={styles['item-1']} id={styles['project-1']} onClick={checkItem}>
-                    <img src={items.at(0).image} alt='project photo 1' loading='eager' draggable='false' />
+                    <Image src={items.at(0).image.webp} fallback={items.at(0).image.fallback} alt={items.at(0).image.alt} />
                 </label>
                 <label className={styles['project']} htmlFor={styles['item-2']} id={styles['project-2']} onClick={checkItem}>
-                    <img src={items.at(1).image} alt='project photo 2' loading='eager' draggable='false' />
+                    <Image src={items.at(1).image.webp} fallback={items.at(1).image.fallback} alt={items.at(1).image.alt} />
                 </label>
                 <label className={styles['project']} htmlFor={styles['item-3']} id={styles['project-3']} onClick={checkItem}>
-                    <img src={items.at(2).image} alt='project photo 3' loading='eager' draggable='false' />
+                    <Image src={items.at(2).image.webp} fallback={items.at(2).image.fallback} alt={items.at(2).image.alt} />
                 </label>
             </div>
         </div>
